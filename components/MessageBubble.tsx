@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { ChatMessage, MessageSender, MessagePurpose } from '../types';
+import { ChatMessage, MessageSender, MessagePurpose, FailedStepPayload } from '../types';
 import { Lightbulb, MessageSquareText, UserCircle, Zap, AlertTriangle, Copy, Check, RefreshCw } from 'lucide-react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
-import { FailedStepPayload } from '../App'; // Import the type
 
 interface SenderIconProps {
   sender: MessageSender;

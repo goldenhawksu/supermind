@@ -126,7 +126,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, isApiKe
   const isDisabledInput = isLoading || isApiKeyMissing;
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 bg-gray-100 border-t border-gray-300">
+    <form onSubmit={handleSubmit} className="px-4 pt-4 pb-0 mb-0 bg-gray-100 border-t border-gray-300">
       {imagePreviewUrl && selectedImage && (
         <div className="mb-2 p-2 bg-gray-200 rounded-md relative max-w-xs border border-gray-300">
           <img src={imagePreviewUrl} alt={selectedImage.name || "图片预览"} className="max-h-24 max-w-full rounded" />
@@ -141,7 +141,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, isApiKe
           <div className="text-xs text-gray-600 mt-1 truncate">{selectedImage.name} ({(selectedImage.size / 1024).toFixed(1)} KB)</div>
         </div>
       )}
-      <div className="flex items-end space-x-2">
+      <div className="flex items-center space-x-2"> {/* Changed items-end to items-center */}
         <textarea
           ref={textareaRef}
           value={inputValue}
@@ -173,7 +173,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, isApiKe
         <button
           type="button"
           onClick={handleFileButtonClick}
-          className="p-3 bg-gray-300 hover:bg-gray-400 rounded-lg text-gray-700 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-100 disabled:opacity-50 disabled:cursor-not-allowed self-end h-[48px]"
+          className="p-3 bg-gray-300 hover:bg-gray-400 rounded-lg text-gray-700 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-100 disabled:opacity-50 disabled:cursor-not-allowed h-[48px]" // Removed self-end
           disabled={isDisabledInput}
           aria-label="添加图片附件"
           title="添加图片"
@@ -183,7 +183,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, isApiKe
         <button
           type={isLoading ? "button" : "submit"}
           onClick={isLoading ? onStopGenerating : undefined}
-          className={`p-3 rounded-lg text-white transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 self-end h-[48px] flex items-center justify-center ${
+          className={`p-3 rounded-lg text-white transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 h-[48px] flex items-center justify-center ${ // Removed self-end
             isLoading
             ? 'bg-red-600 hover:bg-red-700 focus:ring-red-500' // Stop button style
             : `bg-sky-600 hover:bg-sky-700 focus:ring-sky-500 ${isApiKeyMissing || (!inputValue.trim() && !selectedImage) ? 'opacity-50 cursor-not-allowed' : ''}` // Send button style
