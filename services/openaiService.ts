@@ -60,6 +60,7 @@ export const generateOpenAiResponse = async (
   const requestBody = {
     model: modelId,
     messages: messages,
+    stream: true
     // max_tokens: 1024, // Optional: Set a default or make it configurable
     // temperature: 0.7, // Optional
   };
