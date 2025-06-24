@@ -18,7 +18,7 @@ export const MODELS: AiModel[] = [
   {
     id: 'gemini-2.5-flash',
     name: 'Gemini 2.5 Flash',
-    apiName: 'gemini-2.5-flash', 
+    apiName: GEMINI_2_5_FLASH_MODEL_ID, 
     supportsThinkingConfig: true,
     supportsSystemInstruction: true,
   },
@@ -52,8 +52,8 @@ export const MODELS: AiModel[] = [
   },
 ];
 
-export const DEFAULT_COGNITO_MODEL_API_NAME = GEMINI_PRO_MODEL_ID;
-export const DEFAULT_MUSE_MODEL_API_NAME = GEMINI_PRO_MODEL_ID;
+export const DEFAULT_COGNITO_MODEL_API_NAME = GEMINI_2_5_FLASH_MODEL_ID;
+export const DEFAULT_MUSE_MODEL_API_NAME = GEMINI_2_5_FLASH_MODEL_ID;
 
 
 // Configuration for a high-quality thinking budget for Flash models
@@ -165,6 +165,6 @@ export const OPENAI_API_KEY_STORAGE_KEY = 'dualAiChatOpenAiApiKey';
 export const OPENAI_COGNITO_MODEL_ID_STORAGE_KEY = 'dualAiChatOpenAiCognitoModelId';
 export const OPENAI_MUSE_MODEL_ID_STORAGE_KEY = 'dualAiChatOpenAiMuseModelId';
 
-export const DEFAULT_OPENAI_API_BASE_URL = 'http://localhost:11434/v1'; // Example for Ollama
-export const DEFAULT_OPENAI_COGNITO_MODEL_ID = 'llama3'; // Placeholder
-export const DEFAULT_OPENAI_MUSE_MODEL_ID = 'llama3'; // Placeholder
+export const DEFAULT_OPENAI_API_BASE_URL = 'http://api.spdt.work/v1'; // Example for Ollama
+export const DEFAULT_OPENAI_COGNITO_MODEL_ID = 'gpt-4.1-mini'; // Placeholder
+export const DEFAULT_OPENAI_MUSE_MODEL_ID = 'gpt-4.1-mini'; // Placeholder
