@@ -165,6 +165,6 @@ export const OPENAI_API_KEY_STORAGE_KEY = 'dualAiChatOpenAiApiKey';
 export const OPENAI_COGNITO_MODEL_ID_STORAGE_KEY = 'dualAiChatOpenAiCognitoModelId';
 export const OPENAI_MUSE_MODEL_ID_STORAGE_KEY = 'dualAiChatOpenAiMuseModelId';
 
-export const DEFAULT_OPENAI_API_BASE_URL = 'http://api.spdt.work/v1'; // Example for Ollama
+export const DEFAULT_OPENAI_API_BASE_URL = 'https://api.spdt.work/v1'; // Example for Ollama
 export const DEFAULT_OPENAI_COGNITO_MODEL_ID = 'gpt-4.1-mini'; // Placeholder
 export const DEFAULT_OPENAI_MUSE_MODEL_ID = 'gpt-4.1-mini'; // Placeholder
